@@ -705,3 +705,215 @@ h2 em {
     font-size: 1.45rem;
   }
 }
+
+/* Two-block invitation layout */
+body {
+  min-height: 100vh;
+  background: var(--paper);
+}
+.invitation-page {
+  width: min(1160px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 72px 0 80px;
+}
+.page-heading {
+  max-width: 780px;
+  margin-bottom: 54px;
+}
+.page-heading .eyebrow {
+  margin-bottom: 18px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.page-heading h1 {
+  margin: 0 0 22px;
+  font-size: clamp(3rem, 6vw, 5.8rem);
+}
+.intro-copy {
+  max-width: 530px;
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+.invitation-blocks {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 20px;
+  align-items: stretch;
+}
+.invitation-block {
+  min-width: 0;
+  padding: clamp(28px, 4vw, 48px);
+}
+.info-block {
+  display: flex;
+  flex-direction: column;
+  background: var(--ink);
+  color: var(--cream);
+}
+.route-block {
+  background: var(--cream);
+}
+.block-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 44px;
+}
+.block-heading .section-label {
+  margin: 0;
+}
+.block-index {
+  color: var(--coral);
+  font: 500 1.25rem var(--serif);
+}
+.info-block h2,
+.route-block h2 {
+  margin: 0 0 38px;
+  font: 500 clamp(2.3rem, 4vw, 4rem)/1.06 var(--serif);
+  letter-spacing: -0.025em;
+}
+.info-block h2 em,
+.route-block h2 em {
+  color: var(--coral-soft);
+  font-style: normal;
+}
+.event-details {
+  display: grid;
+  gap: 28px;
+  margin-bottom: 38px;
+}
+.event-detail {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+.detail-icon {
+  color: var(--coral-soft);
+  font-size: 1.55rem;
+  line-height: 1;
+}
+.event-detail div {
+  display: grid;
+  gap: 5px;
+}
+.detail-label {
+  color: var(--coral-soft);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.event-detail strong {
+  font: 500 1.4rem var(--serif);
+}
+.event-detail div span:last-child {
+  color: #c3d0cb;
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+.thank-you {
+  max-width: 350px;
+  margin: auto 0 24px;
+  color: #c3d0cb;
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+.contact-link {
+  color: var(--coral-soft);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+.route-copy {
+  max-width: 410px;
+  margin: -12px 0 28px;
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
+.route-block .map-visual {
+  min-height: 310px;
+}
+.route-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  margin-top: 24px;
+}
+.route-actions .primary-button {
+  min-height: 48px;
+}
+.route-actions .text-link {
+  color: var(--ink);
+}
+.route-block .location-status {
+  margin-bottom: 0;
+}
+
+@media (max-width: 720px) {
+  .invitation-page {
+    width: min(100% - 40px, 520px);
+    padding: 42px 0 48px;
+  }
+  .page-heading {
+    margin-bottom: 34px;
+  }
+  .page-heading h1 {
+    font-size: clamp(2.65rem, 12vw, 4rem);
+  }
+  .intro-copy {
+    font-size: 0.92rem;
+  }
+  .invitation-blocks {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .invitation-block {
+    padding: 28px 22px;
+  }
+  .block-heading {
+    margin-bottom: 32px;
+  }
+  .info-block h2,
+  .route-block h2 {
+    margin-bottom: 30px;
+    font-size: 2.45rem;
+  }
+  .route-block .map-visual {
+    min-height: 280px;
+  }
+  .route-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .route-actions .primary-button {
+    width: 100%;
+  }
+  .route-actions .text-link {
+    align-self: flex-start;
+    padding: 4px 0;
+  }
+}
+@media (max-width: 380px) {
+  .invitation-page {
+    width: calc(100% - 28px);
+  }
+  .page-heading h1 {
+    font-size: 2.45rem;
+  }
+  .invitation-block {
+    padding: 24px 18px;
+  }
+  .info-block h2,
+  .route-block h2 {
+    font-size: 2.15rem;
+  }
+  .event-detail strong {
+    font-size: 1.25rem;
+  }
+}
