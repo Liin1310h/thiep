@@ -14,6 +14,10 @@
 * {
   box-sizing: border-box;
 }
+html,
+body {
+  overflow-x: hidden;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -563,33 +567,52 @@ h2 em {
 }
 @media (max-width: 720px) {
   .hero {
-    min-height: 700px;
-    padding: 28px 24px;
+    min-height: 650px;
+    padding: 24px 20px 28px;
   }
   .hero-topline {
-    font-size: 0.58rem;
+    font-size: 0.55rem;
+    letter-spacing: 0.1em;
   }
   .hero-content {
     display: flex;
     flex-direction: column;
     align-items: stretch;
     gap: 0;
-    padding: 75px 0 15px;
+    padding: 58px 0 4px;
+  }
+  h1 {
+    margin-bottom: 20px;
+    font-size: clamp(2.9rem, 14vw, 4rem);
+    line-height: 0.98;
+  }
+  .hero-description {
+    max-width: 320px;
+    margin-bottom: 26px;
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+  .primary-button {
+    min-height: 48px;
+    max-width: 100%;
+    padding: 13px 15px;
+    gap: 14px;
+    font-size: 0.72rem;
   }
   .hero-copy {
     position: relative;
     z-index: 1;
   }
   .hero-art {
-    min-height: 290px;
-    margin-top: -18px;
+    min-height: 245px;
+    margin-top: -10px;
   }
   .sun-disc {
-    width: 230px;
+    width: 205px;
   }
   .cap {
-    top: 77px;
-    transform: translateX(-50%) rotate(-8deg) scale(0.82);
+    top: 60px;
+    transform: translateX(-50%) rotate(-8deg) scale(0.72);
   }
   .floral-one {
     top: 28px;
@@ -613,29 +636,40 @@ h2 em {
   .welcome-section,
   .details-section,
   .thanks-section {
-    padding: 78px 24px;
+    padding: 64px 20px;
   }
   .welcome-grid,
   .details-grid,
   .map-section {
     grid-template-columns: 1fr;
-    gap: 42px;
+    gap: 30px;
   }
   .welcome-note {
     margin-top: 0;
   }
   .detail-card {
-    min-height: 240px;
-    padding: 26px;
+    min-height: 225px;
+    padding: 24px;
   }
   .detail-card h3 {
-    margin-top: 50px;
+    margin-top: 42px;
+    font-size: clamp(1.5rem, 8vw, 2rem);
   }
   .map-copy {
-    padding: 78px 24px 0;
+    padding: 64px 20px 0;
+  }
+  .map-actions {
+    align-items: stretch;
+  }
+  .map-actions .primary-button {
+    width: 100%;
+  }
+  .text-link {
+    align-self: flex-start;
+    padding: 6px 0;
   }
   .map-visual {
-    min-height: 420px;
+    min-height: 340px;
   }
   .thanks-content {
     margin-top: 50px;
@@ -644,7 +678,30 @@ h2 em {
     flex-direction: column;
     align-items: flex-start;
     gap: 13px;
-    padding: 25px 24px;
+    padding: 25px 20px;
     font-size: 0.62rem;
+  }
+}
+@media (max-width: 380px) {
+  .hero-topline {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+  }
+  .hero-content {
+    padding-top: 46px;
+  }
+  h1 {
+    font-size: 2.75rem;
+  }
+  .hero-art {
+    min-height: 225px;
+  }
+  .welcome-section h2,
+  .map-section h2 {
+    font-size: 2.25rem;
+  }
+  .detail-card h3 {
+    font-size: 1.45rem;
   }
 }
