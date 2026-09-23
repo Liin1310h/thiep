@@ -320,11 +320,7 @@ p {
 /* Tối ưu hiển thị trên điện thoại */
 @media (max-width: 768px) {
   .map-visual-wrapper {
-    height: 270px;
-  }
-  .c2-marker {
-    top: 44%;
-    left: 52%;
+    width: calc(100% - 40px);
   }
 }
 
